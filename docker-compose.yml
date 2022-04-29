@@ -1,0 +1,15 @@
+version: '2.1'
+
+services:
+  logwatcher:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.template
+    labels:
+      io.balena.features.journal-logs: '1'
+    restart: unless-stopped
+    networks:
+      - internal
+
+networks:
+  internal: {}
