@@ -2,12 +2,11 @@ FROM balenalib/%%BALENA_MACHINE_NAME%%-node:16-bullseye-run
 
 RUN apt update && apt install -y systemd && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p /usr/src/logwatcher/lib
-COPY package.json /usr/src/logwatcher/
-COPY package-lock.json /usr/src/logwatcher/
+RUN mkdir -p /usr/src/logwatcher
+COPY package.json package-lock.json /usr/src/logwatcher/
 COPY lib/ /usr/src/logwatcher/lib/
 
 WORKDIR /usr/src/logwatcher
 RUN npm i
 
-CMD ["node", "/usr/src/logwatcher/lib/index.js"]
+CMD ["npm", "start"]
