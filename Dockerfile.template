@@ -1,6 +1,6 @@
 FROM balenalib/%%BALENA_MACHINE_NAME%%-node:16-bullseye-run
 
-RUN apt update && apt install -y systemd
+RUN apt update && apt install -y systemd && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/src/logwatcher/lib
 COPY package.json /usr/src/logwatcher/
