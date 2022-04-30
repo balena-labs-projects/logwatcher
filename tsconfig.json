@@ -1,0 +1,24 @@
+{
+  "extends": "@balena/lint/tsconfig.json",
+  "compilerOptions": {
+    "target": "es2020",
+    "noImplicitAny": false,
+    "allowJs": false,
+    "outDir": "build",
+    "esModuleInterop": true,
+    "removeComments": false,
+    "strict": true,
+    "declaration": true,
+    "skipLibCheck": true
+  },
+  "typedocOptions": {
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeExternals": true,
+    "gitRevision": "main",
+    "out": "docs"
+  },
+  "include": [
+    "lib/**/*.ts",
+  ]
+}
