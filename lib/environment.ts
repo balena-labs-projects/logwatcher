@@ -1,8 +1,11 @@
+import { NodeOptions } from '@sentry/node';
+
 // Map trigger keywords to fingerprint names
 interface Triggers {
 	[keyword: string]: string;
 }
 
+// Parse trigger keywords
 export const triggers: Triggers = {};
 Object.keys(process.env).forEach((key) => {
 	if (key.indexOf('LW_') === 0) {
@@ -16,3 +19,15 @@ Object.keys(process.env).forEach((key) => {
 		});
 	}
 });
+
+// Parse Sentry configuration
+export const sentryConfig: NodeOptions = {
+	dsn: process.env.SENTRY_DSN || '',
+	tracesSampleRate: parseInt(
+		process.env.SENTRY_TRACES_SAMPLE_RATE || '1.0',
+		10,
+	),
+};
+if (sentryConfig.dsn!.length === 0) {
+	throw new Error('Sentry DSN is not set');
+}

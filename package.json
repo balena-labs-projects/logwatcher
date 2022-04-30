@@ -51,6 +51,7 @@
   "author": "Josh Bowling <josh@monarci.com>",
   "license": "AGPL-3.0",
   "dependencies": {
+    "@sentry/node": "^6.19.7",
     "@seydx/journalctl": "^1.0.0",
     "lodash": "^4.17.21"
   },
