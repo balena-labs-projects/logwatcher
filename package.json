@@ -1,8 +1,30 @@
 {
   "name": "logwatcher",
+  "description": "Logwatcher monitors journald logs and notifies external services on matching keywords",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshbwlng/logwatcher.git"
+  },
+  "engines": {
+    "node": ">=16.14.0"
+  },
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "files": [
+    "build/"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "deplint": {
+    "files": [
+      "lib/**/*.{ts}"
+    ],
+    "modules": [
+      "lib"
+    ]
+  },
   "lint-staged": {
     "*.ts": [
       "balena-lint --fix"
@@ -18,9 +40,16 @@
     "prepack": "npm run build",
     "start": "node lib/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "logwatcher",
+    "log",
+    "watch",
+    "monitor",
+    "sentry",
+    "glitchtip"
+  ],
+  "author": "Josh Bowling <josh@monarci.com>",
+  "license": "AGPL-3.0",
   "dependencies": {
     "@seydx/journalctl": "^1.0.0",
     "lodash": "^4.17.21"
