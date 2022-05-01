@@ -28,6 +28,5 @@ export const sentryConfig: NodeOptions = {
 		10,
 	),
 };
-if (sentryConfig.dsn!.length === 0) {
-	throw new Error('Sentry DSN is not set');
-}
+
+export const isDevelopment = process.env.NODE_ENV === 'development';
