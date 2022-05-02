@@ -39,7 +39,7 @@
     "test:unit": "jest",
     "doc": "typedoc lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
-    "start": "node lib/index.js",
+    "start": "node build/index.js",
     "dev": "NODE_ENV=development nodemon ./lib/index.ts"
   },
   "keywords": [
