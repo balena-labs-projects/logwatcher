@@ -8,6 +8,7 @@ WORKDIR /usr/src/logwatcher
 COPY package.json package-lock.json /usr/src/logwatcher/
 RUN npm i
 
+COPY tsconfig.json tsconfig.build.json /usr/src/logwatcher/
 #dev-cmd-live=npm run dev
 COPY lib/ /usr/src/logwatcher/lib/
 RUN npm run build
