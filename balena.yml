@@ -7,7 +7,7 @@ assets:
   repository:
     type: blob.asset
     data:
-      url: 'https://github.com/joshbwlng/logwatcher'
+      url: 'https://github.com/balenablocks/logwatcher'
 data:
   defaultDeviceType: raspberrypi4-64
   supportedDeviceTypes:

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/joshbwlng/logwatcher.git"
+    "url": "https://github.com/balenablocks/logwatcher.git"
   },
   "engines": {
     "node": ">=16.14.0"
