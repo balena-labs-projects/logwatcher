@@ -10,7 +10,7 @@ To use this image, create a service in your `docker-compose.yml` as shown below:
 version: "2.1"
 
 logwatcher:
-    image: bh.cr/balenablocks/logwatcher
+    image: bh.cr/gh_monarci/logwatcher
     labels:
       io.balena.features.journal-logs: '1'
     restart: unless_stopped
@@ -19,11 +19,11 @@ logwatcher:
 
 ## Customisation
 
-`bh.cr/balenablocks/logwatcher` can be configured via the following variables:
+`bh.cr/gh_monarci/logwatcher` can be configured via the following variables:
 
 | Environment Variable        | Default | Description                                          |
 | --------------------------- | ------  | -----------------------------------------------------|
-| `SENTRY_DNS`                | ``      | DSN for sending logs to Sentry service               |
+| `SENTRY_DNS`                | ` `     | DSN for sending logs to Sentry service               |
 | `SENTRY_TRACES_SAMPLE_RATE` | `1.0`   | Sentry traces sample rate                            |
 
 Set any keywords to match with fingerprints with `LW_<fingerprint>` environment variables.
