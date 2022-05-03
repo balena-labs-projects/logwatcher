@@ -9,7 +9,8 @@ To use this image, create a service in your `docker-compose.yml` as shown below:
 ```
 version: "2.1"
 
-logwatcher:
+services:
+  logwatcher:
     image: bh.cr/gh_monarci/logwatcher
     labels:
       io.balena.features.journal-logs: '1'
