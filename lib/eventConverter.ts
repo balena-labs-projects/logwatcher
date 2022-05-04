@@ -69,7 +69,6 @@ export function convertToSentryEvent(event: JournalEvent): SentryEvent {
 	sentryEvent.fingerprint = _.compact([
 		event.SYSLOG_IDENTIFIER,
 		event._EXE,
-		event._SYSTEMD_UNIT,
 		sentryEvent.message,
 	]);
 
