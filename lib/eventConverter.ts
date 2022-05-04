@@ -50,6 +50,7 @@ export function convertToSentryEvent(event: JournalEvent): SentryEvent {
 
 	// Indicates when the event was created in the Sentry SDK. The format is either a string as defined in RFC 3339 or a numeric
 	// (integer or float) value representing the number of seconds that have elapsed since the Unix epoch.
+	// convert from microseconds to seconds
 	if (event.__REALTIME_TIMESTAMP != null) {
 		sentryEvent.timestamp =
 			Number(event.__REALTIME_TIMESTAMP).valueOf() / 1000000;
