@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { isDevelopment, triggers } from './environment';
+import { isDevelopment, triggers, options } from './environment';
 import { logSentryEvent } from './logger';
 import { convertToSentryEvent } from './eventConverter';
 
@@ -17,6 +17,12 @@ new Journalctl({
 }).on('event', (event: any) => {
 	if (isDevelopment) {
 		console.log(`received event: ${JSON.stringify(event)}`);
+	}
+	if (options.defaultLogLevelPriority != null) {
+		const eventPriority = parseInt(event.PRIORITY, 10);
+		if (eventPriority > options.defaultLogLevelPriority) {
+			return;
+		}
 	}
 
 	for (const filtersRegEx of filtersRegExs) {

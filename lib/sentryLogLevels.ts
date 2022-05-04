@@ -7,13 +7,37 @@ export interface TextLogLevels {
 // Map of string log levels to Sentry severity levels
 export const sentryTextLogLevels: TextLogLevels = {
 	emerg: Sentry.Severity.Fatal,
+	panic: Sentry.Severity.Fatal,
 	fatal: Sentry.Severity.Fatal,
+	alert: Sentry.Severity.Critical,
 	crit: Sentry.Severity.Critical,
+	err: Sentry.Severity.Error,
 	error: Sentry.Severity.Error,
 	warn: Sentry.Severity.Warning,
+	warning: Sentry.Severity.Warning,
 	log: Sentry.Severity.Log,
+	notice: Sentry.Severity.Log,
 	info: Sentry.Severity.Info,
 	debug: Sentry.Severity.Debug,
+};
+
+export interface LogLevelsPriorities {
+	[priority: string]: number;
+}
+
+// Map of string log levels to int priorities
+export const logLevelsToPriorities: LogLevelsPriorities = {
+	emerg: 0,
+	panic: 0, // deprecated
+	alert: 1,
+	crit: 2,
+	err: 3,
+	error: 3, // deprecated
+	warning: 4,
+	warn: 4, // deprecated
+	notice: 5,
+	info: 6,
+	debug: 7,
 };
 
 export interface LogLevels {
