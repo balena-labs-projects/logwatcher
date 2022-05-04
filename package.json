@@ -1,5 +1,5 @@
 {
-  "name": "logwatcher",
+  "name": "@balena/logwatcher",
   "description": "Logwatcher monitors journald logs and notifies external services on matching keywords",
   "version": "1.0.0",
   "repository": {
@@ -7,7 +7,7 @@
     "url": "https://github.com/balenablocks/logwatcher.git"
   },
   "engines": {
-    "node": ">=16.14.0"
+    "node": ">=14.17.0"
   },
   "main": "build/index.js",
   "types": "build/index.d.ts",
