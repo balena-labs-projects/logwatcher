@@ -5,6 +5,14 @@
  */
 
 export interface JournalEvent {
+	// Docker fields
+	CONTAINER_PARTIAL_MESSAGE?: string;
+	IMAGE_NAME?: string;
+	CONTAINER_ID_FULL?: string;
+	CONTAINER_TAG?: string;
+	CONTAINER_ID?: string;
+	CONTAINER_NAME?: string;
+
 	// -------------------------------------------------------------------------------------------------------
 	// User Journal Fields: ( not beginning with _ )
 	// The human-readable message string for this entry. This is supposed to be the primary text shown to the user.

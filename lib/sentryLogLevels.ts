@@ -29,6 +29,7 @@ export interface LogLevelsPriorities {
 export const logLevelsToPriorities: LogLevelsPriorities = {
 	emerg: 0,
 	panic: 0, // deprecated
+	fatal: 0, // only Sentry
 	alert: 1,
 	crit: 2,
 	err: 3,
@@ -36,6 +37,7 @@ export const logLevelsToPriorities: LogLevelsPriorities = {
 	warning: 4,
 	warn: 4, // deprecated
 	notice: 5,
+	log: 5, // only for Sentry
 	info: 6,
 	debug: 7,
 };

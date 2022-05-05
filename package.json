@@ -36,7 +36,7 @@
     "lint": "balena-lint lib && deplint",
     "lint:fix": "balena-lint --fix lib",
     "test": "npm run lint && npm run test:unit",
-    "test:unit": "jest",
+    "test:unit": "jest lib",
     "doc": "typedoc lib/ && touch docs/.nojekyll",
     "prepack": "npm run build",
     "start": "node build/index.js",
@@ -54,7 +54,7 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "@sentry/node": "^6.19.7",
-    "@seydx/journalctl": "^1.0.0",
+    "journalctl": "^1.1.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
