@@ -3,9 +3,8 @@ import { isDevelopment, triggers, options } from './environment';
 import { logSentryEvent } from './logger';
 import { convertToSentryEvent } from './eventConverter';
 import { logLevelsToPriorities } from './sentryLogLevels';
-
-// tslint:disable-next-line: no-var-requires
-const Journalctl = require('journalctl');
+import { JournalEvent } from './journalEvent';
+import { Journalctl } from './journalctl';
 
 const utf8decoder = new TextDecoder();
 
@@ -17,7 +16,7 @@ const filtersRegExs = filters.map((pattern) => ({
 
 new Journalctl({
 	all: true,
-}).on('event', (event: any) => {
+}).on('event', (event: JournalEvent) => {
 	if (
 		event.CONTAINER_NAME != null &&
 		event.CONTAINER_NAME.indexOf('logwatcher') === 0

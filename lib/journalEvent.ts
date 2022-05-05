@@ -17,7 +17,7 @@ export interface JournalEvent {
 	// User Journal Fields: ( not beginning with _ )
 	// The human-readable message string for this entry. This is supposed to be the primary text shown to the user.
 	// It is usually not translated (but might be in some cases), and is not supposed to be parsed for metadata.
-	MESSAGE: string;
+	MESSAGE: any;
 	/*
 	A 128-bit message identifier ID for recognizing certain message types, if this is desirable. This should contain a
 	128-bit ID formatted as a lower-case hexadecimal string, without any separating dashes or suchlike. This is r

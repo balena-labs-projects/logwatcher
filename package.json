@@ -54,7 +54,7 @@
   "license": "AGPL-3.0",
   "dependencies": {
     "@sentry/node": "^6.19.7",
-    "journalctl": "^1.1.0",
+    "JSONStream": "^1.3.5",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

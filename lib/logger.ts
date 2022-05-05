@@ -23,7 +23,7 @@ Sentry.init({
 
 export function logSentryEvent(event: Sentry.Event) {
 	if (isDevelopment) {
-		console.debug('Sending Sentry Event:\n' + JSON.stringify(event, null, 4));
+		// console.debug('Sending Sentry Event:\n' + JSON.stringify(event, null, 4));
 	}
 
 	Sentry.captureEvent(event);
