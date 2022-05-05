@@ -1,4 +1,4 @@
-import { logLevels } from './logger';
+import { logLevels } from './sentryLogLevels';
 
 describe('logLevels', () => {
 	test('should map priority to correct levels', () => {
