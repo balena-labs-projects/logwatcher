@@ -11,6 +11,7 @@ export const sentryTextLogLevels: TextLogLevels = {
 	fatal: Sentry.Severity.Fatal,
 	alert: Sentry.Severity.Critical,
 	crit: Sentry.Severity.Critical,
+	critical: Sentry.Severity.Critical,
 	err: Sentry.Severity.Error,
 	error: Sentry.Severity.Error,
 	warn: Sentry.Severity.Warning,

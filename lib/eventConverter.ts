@@ -41,11 +41,11 @@ const commonLogFormatRegexs = [
 		regExp:
 			/^(?<time>.*)\[(.*\:)(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG|emerg|panic|alert|crit|err|error|warning|warn|notice|info|debug)\](?<msg>.*)$/,
 	},
-	// expects to find the level after a prefix that is assumed to be a timestamp
+	// expects to find the level after a prefix that is assumed to be a timestamp.
 	{
 		name: 'greedyLogRegex',
 		regExp:
-			/^(?<time>.*)(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG|emerg|panic|alert|crit|err|error|warning|warn|notice|info|debug)(?<msg>.*)$/,
+			/^(?<time>.*)(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG)(?<msg>.*)$/,
 	},
 ];
 // TODO: add other msg formats
