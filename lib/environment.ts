@@ -46,4 +46,4 @@ export const sentryConfig: NodeOptions = {
 	),
 };
 
-export const isDevelopment = process.env.NODE_ENV === 'development';
+export const isDebug = process.env.DEBUG === '1';

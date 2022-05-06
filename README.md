@@ -25,6 +25,7 @@ services:
   logwatcher:
     image: bh.cr/gh_monarci/logwatcher
     environment:
+      DEBUG: 1
       SENTRY_DSN: https://1234@5678.ingest.sentry.io/123456
       LW_Timeout: Schema query timeout
     labels:
@@ -43,9 +44,10 @@ services:
 
 | Environment Variable        | Default | Description                                          |
 | --------------------------- | ------  | -----------------------------------------------------|
-| `SENTRY_DSN`                | ` `     | DSN for sending logs to Sentry service               |
+| `SENTRY_DSN`                | none    | DSN for sending logs to Sentry service               |
 | `SENTRY_TRACES_SAMPLE_RATE` | `1.0`   | Sentry traces sample rate                            |
 | `LW_LEVEL_DEFAULT`          | none    | Default minimum log level that creates an event      |
+| `DEBUG`                     | none    | Output debug logs, `1` to enable                     |
 
 Set any keywords to match with fingerprints with `LW_<fingerprint>` environment variables.
 

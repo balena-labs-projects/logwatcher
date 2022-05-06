@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { isDevelopment, triggers, options } from './environment';
+import { isDebug, triggers, options } from './environment';
 import { logEvent, logSentryEvent, sendToSentry } from './logger';
 import { convertToSentryEvent } from './eventConverter';
 import { logLevelsToPriorities } from './sentryLogLevels';
@@ -23,8 +23,8 @@ new Journalctl({
 		return;
 	}
 
-	// Log all received events if in development mode
-	if (isDevelopment) {
+	// Log all received events if in debug mode
+	if (isDebug) {
 		logEvent(event);
 	}
 
@@ -53,7 +53,7 @@ new Journalctl({
 				}
 			}
 
-			if (isDevelopment) {
+			if (isDebug) {
 				logSentryEvent(sentryEvent);
 			}
 			sendToSentry(sentryEvent);
