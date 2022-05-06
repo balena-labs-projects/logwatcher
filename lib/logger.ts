@@ -31,10 +31,9 @@ export function logSentryEvent(event: Sentry.Event) {
 }
 
 export function logEvent(event: JournalEvent) {
-	console.debug(
-		'Received event:',
-		event.CONTAINER_NAME,
-		event.PRIORITY,
-		event.MESSAGE,
-	);
+	const parts = [event.PRIORITY, event.MESSAGE];
+	if (event.CONTAINER_NAME) {
+		parts.unshift(event.CONTAINER_NAME);
+	}
+	console.debug('Received event:', parts.join(' '));
 }
