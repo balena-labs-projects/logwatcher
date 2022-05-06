@@ -2,7 +2,7 @@ import childProcess = require('child_process');
 import EventEmitter = require('events');
 import * as JSONstream from 'JSONStream';
 import { JournalEvent } from './journalEvent';
-import { charCodeToString } from './utils';
+// import { charCodeToString } from './utils';
 
 export class Journalctl extends EventEmitter {
 	private journalctl;
@@ -41,7 +41,9 @@ export class Journalctl extends EventEmitter {
 
 		this.journalctl.stdout.pipe(
 			JSONstream.parse(true).on('data', (chunk: JournalEvent) => {
-				chunk.MESSAGE = charCodeToString(chunk.MESSAGE);
+				// Disabling it because it generates:
+				// "MESSAGE":"\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000.....
+				// chunk.MESSAGE = charCodeToString(chunk.MESSAGE);
 				this.emit('event', chunk);
 			}),
 		);
