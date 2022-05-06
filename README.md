@@ -17,6 +17,25 @@ services:
     restart: unless_stopped
 ```
 
+## Example
+```
+version: '2.1'
+
+services:
+  logwatcher:
+    image: bh.cr/gh_monarci/logwatcher
+    environment:
+      SENTRY_DSN: https://1234@5678.ingest.sentry.io/123456
+      LW_Timeout: Schema query timeout
+    labels:
+      io.balena.features.journal-logs: '1'
+    restart: unless-stopped
+  app:
+    image: balenalib/armv7hf-debian
+    command: >
+      /bin/bash -c 'while true; do echo "[Unhandled Server Error] Schema query timeout"; sleep 3; done'
+    restart: unless-stopped
+```
 
 ## Customisation
 

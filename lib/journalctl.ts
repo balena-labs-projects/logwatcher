@@ -2,7 +2,7 @@ import _ from 'lodash';
 import childProcess = require('child_process');
 import EventEmitter = require('events');
 import * as JSONstream from 'JSONStream';
-import { JournalEvent } from './journalEvent';
+import type { JournalEvent } from './journalEvent';
 
 const utf8decoder = new TextDecoder();
 

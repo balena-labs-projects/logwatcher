@@ -1,4 +1,4 @@
-import { NodeOptions } from '@sentry/node';
+import type { NodeOptions } from '@sentry/node';
 import { logLevelsToPriorities } from './sentryLogLevels';
 
 // Map trigger keywords to fingerprint names

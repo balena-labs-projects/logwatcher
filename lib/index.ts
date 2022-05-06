@@ -1,9 +1,9 @@
 import _ from 'lodash';
 import { isDevelopment, triggers, options } from './environment';
-import { logSentryEvent } from './logger';
+import { logEvent, logSentryEvent, sendToSentry } from './logger';
 import { convertToSentryEvent } from './eventConverter';
 import { logLevelsToPriorities } from './sentryLogLevels';
-import { JournalEvent } from './journalEvent';
+import type { JournalEvent } from './journalEvent';
 import { Journalctl } from './journalctl';
 
 const filters = _.uniq(Object.keys(triggers));
@@ -15,17 +15,19 @@ const filtersRegExs = filters.map((pattern) => ({
 new Journalctl({
 	all: true,
 }).on('event', (event: JournalEvent) => {
+	// Ignore our own messages
 	if (
 		event.CONTAINER_NAME != null &&
 		event.CONTAINER_NAME.indexOf('logwatcher') === 0
 	) {
-		// ignore our own messages
 		return;
 	}
 
+	// Log all received events if in development mode
 	if (isDevelopment) {
-		console.log(`received event: ${JSON.stringify(event)}`);
+		logEvent(event);
 	}
+
 	for (const filtersRegEx of filtersRegExs) {
 		if (filtersRegEx.regEx.test(event.MESSAGE)) {
 			const sentryEvent = convertToSentryEvent(event);
@@ -36,9 +38,6 @@ new Journalctl({
 			);
 			if (sentryEvent.level != null) {
 				const sentryLevelPriority = logLevelsToPriorities[sentryEvent.level];
-				if (isDevelopment) {
-					console.log(`sentryEvent: ${JSON.stringify(sentryEvent)}`);
-				}
 				if (options.defaultLogLevelPriority != null) {
 					if (sentryLevelPriority > options.defaultLogLevelPriority) {
 						return;
@@ -54,7 +53,10 @@ new Journalctl({
 				}
 			}
 
-			logSentryEvent(sentryEvent);
+			if (isDevelopment) {
+				logSentryEvent(sentryEvent);
+			}
+			sendToSentry(sentryEvent);
 		}
 	}
 });

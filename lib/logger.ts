@@ -1,6 +1,7 @@
 import * as Sentry from '@sentry/node';
 import _ from 'lodash';
-import { isDevelopment, sentryConfig } from './environment';
+import { sentryConfig } from './environment';
+import type { JournalEvent } from './journalEvent';
 
 // tslint:disable-next-line: no-var-requires
 const { version } = require('../package.json');
@@ -21,10 +22,19 @@ Sentry.init({
 	},
 });
 
-export function logSentryEvent(event: Sentry.Event) {
-	if (isDevelopment) {
-		// console.debug('Sending Sentry Event:\n' + JSON.stringify(event, null, 4));
-	}
-
+export function sendToSentry(event: Sentry.Event) {
 	Sentry.captureEvent(event);
+}
+
+export function logSentryEvent(event: Sentry.Event) {
+	console.debug('Sending to Sentry:', event.logger, event.level, event.message);
+}
+
+export function logEvent(event: JournalEvent) {
+	console.debug(
+		'Received event:',
+		event.CONTAINER_NAME,
+		event.PRIORITY,
+		event.MESSAGE,
+	);
 }
