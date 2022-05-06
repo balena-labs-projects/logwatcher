@@ -1,9 +1,9 @@
-import { Event as SentryEvent } from '@sentry/node/types';
+import type { Event as SentryEvent } from '@sentry/node/types';
 import * as Sentry from '@sentry/node';
 import _ from 'lodash';
-import { JournalEvent } from './journalEvent';
+import type { JournalEvent } from './journalEvent';
 import { sentryTextLogLevels, logLevels } from './sentryLogLevels';
-import { isDevelopment } from './environment';
+import { isDebug } from './environment';
 
 interface LogFormatRegex {
 	name: string;
@@ -195,7 +195,7 @@ function processWithLogFormats(
 	}
 
 	if (matchResult != null) {
-		if (isDevelopment) {
+		if (isDebug) {
 			console.log(
 				`regex ${logFormatRegex.name} matched: ${JSON.stringify(
 					matchResult,
