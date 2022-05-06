@@ -33,19 +33,19 @@ const commonLogFormatRegexs = [
 	{
 		name: 'greedyCaretLogRegex',
 		regExp:
-			/^(?<time>.*)\[(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG|emerg|panic|alert|crit|err|error|warning|warn|notice|info|debug)\](?<msg>.*)$/,
+			/^(?<time>.*)\[(?<level>EMERGENCY|EMERG|PANIC|ALERT|CRITICAL|CRIT|ERROR|ERR|WARNING|WARN|NOTICE|INFO|DEBUG|emergency|emerg|panic|alert|critical|crit|error|err|warning|warn|notice|info|debug)\](?<msg>.*)$/,
 	},
 	// fetches the level from an expression like [app:error]
 	{
 		name: 'greedyCaretColonLogRegex',
 		regExp:
-			/^(?<time>.*)\[(.*\:)(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG|emerg|panic|alert|crit|err|error|warning|warn|notice|info|debug)\](?<msg>.*)$/,
+			/^(?<time>.*)\[(.*\:)(?<level>EMERGENCY|EMERG|PANIC|ALERT|CRITICAL|CRIT|ERROR|ERR|WARNING|WARN|NOTICE|INFO|DEBUG|emergency|emerg|panic|alert|critical|crit|error|err|warning|warn|notice|info|debug)\](?<msg>.*)$/,
 	},
-	// expects to find the level after a prefix that is assumed to be a timestamp.
+	// expects to find the level after a prefix that is assumed to be a timestamp. Not using lowecase because that matches a lot of false positives like in Overrides
 	{
 		name: 'greedyLogRegex',
 		regExp:
-			/^(?<time>.*)(?<level>EMERG|PANIC|ALERT|CRIT|ERR|ERROR|WARNING|WARN|NOTICE|INFO|DEBUG)(?<msg>.*)$/,
+			/^(?<time>.*)(?<level>EMERGENCY|EMERG|PANIC|ALERT|CRITICAL|CRIT|ERROR|ERR|WARNING|WARN|NOTICE|INFO|DEBUG)(?<msg>.*)$/,
 	},
 ];
 // TODO: add other msg formats
