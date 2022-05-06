@@ -197,7 +197,9 @@ function processWithLogFormats(
 	if (matchResult != null) {
 		if (isDevelopment) {
 			console.log(
-				`regex ${logFormatRegex.name} matched: ${JSON.stringify(matchResult)}`,
+				`regex ${logFormatRegex.name} matched: ${JSON.stringify(
+					matchResult,
+				)} at ${matchResult.groups?.level}`,
 			);
 		}
 		sentryEvent.message = matchResult.groups?.msg;
