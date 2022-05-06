@@ -11,7 +11,7 @@ version: "2.1"
 
 services:
   logwatcher:
-    image: bh.cr/gh_monarci/logwatcher
+    image: bh.cr/logwatcher/logwatcher-armv7hl
     labels:
       io.balena.features.journal-logs: '1'
     restart: unless_stopped
@@ -23,7 +23,7 @@ version: '2.1'
 
 services:
   logwatcher:
-    image: bh.cr/gh_monarci/logwatcher
+    image: bh.cr/logwatcher/logwatcher-armv7hl
     environment:
       DEBUG: 1
       SENTRY_DSN: https://1234@5678.ingest.sentry.io/123456
@@ -37,6 +37,11 @@ services:
       /bin/bash -c 'while true; do echo "[Unhandled Server Error] Schema query timeout"; sleep 3; done'
     restart: unless-stopped
 ```
+
+Currently, the following images are available for use:
+- `bh.cr/logwatcher/logwatcher-armv7hl`
+- `bh.cr/logwatcher/logwatcher-amd64`
+- `bh.cr/logwatcher/logwatcher-aarch64`
 
 ## Customisation
 
