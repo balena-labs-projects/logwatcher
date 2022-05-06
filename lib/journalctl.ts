@@ -1,8 +1,10 @@
+import _ from 'lodash';
 import childProcess = require('child_process');
 import EventEmitter = require('events');
 import * as JSONstream from 'JSONStream';
 import { JournalEvent } from './journalEvent';
-// import { charCodeToString } from './utils';
+
+const utf8decoder = new TextDecoder();
 
 export class Journalctl extends EventEmitter {
 	private journalctl;
@@ -40,11 +42,12 @@ export class Journalctl extends EventEmitter {
 		this.journalctl = childProcess.spawn('journalctl', args, { stdio: 'pipe' });
 
 		this.journalctl.stdout.pipe(
-			JSONstream.parse(true).on('data', (chunk: JournalEvent) => {
-				// Disabling it because it generates:
-				// "MESSAGE":"\u0000\u0000\u0000\u0000\u0000\u0000\u0002\u0000.....
-				// chunk.MESSAGE = charCodeToString(chunk.MESSAGE);
-				this.emit('event', chunk);
+			JSONstream.parse(true).on('data', (event: JournalEvent) => {
+				if (_.isArray(event.MESSAGE)) {
+					const u8arr = new Uint8Array(event.MESSAGE);
+					event.MESSAGE = utf8decoder.decode(u8arr);
+				}
+				this.emit('event', event);
 			}),
 		);
 	}
