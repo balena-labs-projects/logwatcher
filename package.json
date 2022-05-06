@@ -1,7 +1,7 @@
 {
   "name": "@balena/logwatcher",
   "description": "Logwatcher monitors journald logs and notifies external services on matching keywords",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "repository": {
     "type": "git",
     "url": "https://github.com/balenablocks/logwatcher.git"
@@ -76,6 +76,6 @@
     "pre-commit": "npx lint-staged"
   },
   "versionist": {
-    "publishedAt": "2022-05-06T05:43:06.344Z"
+    "publishedAt": "2022-05-06T06:07:41.350Z"
   }
 }
