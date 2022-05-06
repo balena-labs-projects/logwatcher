@@ -55,6 +55,20 @@ For each event that logwatcher retrieves from the logs it will add a fingerprint
 - event _EXE : the executable path
 - event	message : event message. If the event is in docker `logfmt` format, this will be the value of `msg`. Otherwise is the full message
 
+## Error messages format
+
+`logwatcher` needs to extract two basic bits of information: error message and error level. The error level is the main configurable aspect of `logwatcher` as it defines at which level errors are sent to Sentry/Glitch. This is done with the env var `LW_LEVEL_DEFAULT`.
+
+`logwatcher` receives `journald` events which have `PRIORITY` and `_MESSAGE` properties that can be directly mapped to Sentry/Glitch event properties. Alas, most applications _don't_ log through `journalctl` but simply write to `stdout`. `logwatcher` receives the logging events from other applications as journalctl events **but** the `PRIORITY` information is useless as is always `INFO`. So, in order to detect the intended error level `logwatcher` needs to parse the error message.
+
+The good thing about logging aspects is that there are many standard formats to choose from!. Some formats are defined by the language or logging library; other applications use arbitrary logging formats. 
+
+Extracting this information is currently done by trying a set of RegEx, from most specific to more generic, until one matches. If none matches, `logwatcher` uses `INFO`.
+
+You can check the ReExs at [./lib/eventConverter.ts]
+
+
+## Setting env vars
 You can refer to the [docs](https://www.balena.io/docs/learn/manage/serv-vars/#environment-and-service-variables) on how to set environment or service variables
 
 Alternatively, you can set them in the `docker-compose.yml` or `Dockerfile.template` files.
