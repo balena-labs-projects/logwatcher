@@ -6,8 +6,6 @@ import { logLevelsToPriorities } from './sentryLogLevels';
 import { JournalEvent } from './journalEvent';
 import { Journalctl } from './journalctl';
 
-const utf8decoder = new TextDecoder();
-
 const filters = _.uniq(Object.keys(triggers));
 const filtersRegExs = filters.map((pattern) => ({
 	regEx: new RegExp(pattern),
@@ -23,10 +21,6 @@ new Journalctl({
 	) {
 		// ignore our own messages
 		return;
-	}
-	if (_.isArray(event.MESSAGE)) {
-		const u8arr = new Uint8Array(event.MESSAGE);
-		event.MESSAGE = utf8decoder.decode(u8arr);
 	}
 
 	if (isDevelopment) {
