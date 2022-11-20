@@ -5,7 +5,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/balenablocks/logwatcher.git"
+    "url": "https://github.com/balena-labs-projects/logwatcher.git"
   },
   "engines": {
     "node": ">=14.17.0"
