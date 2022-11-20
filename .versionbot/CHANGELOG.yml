@@ -1,0 +1,609 @@
+- commits:
+    - subject: "CI: Move to flowzone"
+      hash: 8abfa68a8157bb3779369e79de81c229abc66015
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Josh Bowling <josh@monarci.com>
+        signed-off-by: Josh Bowling <josh@monarci.com>
+      author: Josh Bowling
+      nested: []
+  version: 1.0.12
+  title: ""
+  date: 2022-11-20T23:16:49.836Z
+- version: 1.0.11
+  date: 2022-05-06T06:10:25Z
+  commits:
+    - hash: 83821dab24ac27ac804fbafdb796d354a8dc62a0
+      author: Josh Bowling
+      footers:
+        change-type: patch
+        signed-off-by: Josh Bowling <josh@balena.io>
+      subject: Update image in readme
+      body: null
+- version: 1.0.10
+- date: 2022-05-06T05:45:46Z
+- commits:
+    - hash: daf9f7f997b72b01685d4806da16e444630fbb8c
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update debug log
+- commits:
+    - body: null
+- version: 1.0.9
+- date: 2022-05-06T05:18:14Z
+- commits:
+    - hash: da2f8844982aebfca2ae3645b3f0cbee92fa6705
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add debug mode
+- commits:
+    - body: |-
+        Should only output debug logs if the developer
+        explicitly wants them as they are noisy. Many
+        node developers will have NODE_ENV=development
+        when developing with Livepush, meaning we shouldn't
+        use that to decide if we should output logwatcher
+        debug logs as the developer probably doesn't want
+        them always on during development.
+- version: 1.0.8
+- date: 2022-05-06T03:43:12Z
+- commits:
+    - hash: 1942071f41f1d404bdedcb6891df5330391d15fa
+- commits:
+    - author: Carlo Miguel F. Cruz
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+- commits:
+    - subject: Replace charCodeToString with utf8decoder.
+- commits:
+    - body: |-
+        This provides a reliable way of parsing the message
+        from character code to string.
+- commits:
+    - hash: 0c6b499ca381f82c559e9dfb00a0e736d832c592
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update debug logs, various cleanup
+- commits:
+    - body: null
+- version: 1.0.7
+- date: 2022-05-06T02:14:35Z
+- commits:
+    - hash: 4ece68d6442a05922625987155da5b7c12382733
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+- commits:
+    - subject: README
+- commits:
+    - body: null
+- version: 1.0.6
+- date: 2022-05-06T01:51:53Z
+- commits:
+    - hash: f31a752f0468f8f881fd0ed50f8fe5d3d9f2ed26
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+- commits:
+    - subject: FIX journalctl parsing
+- commits:
+    - body: null
+- commits:
+    - hash: a5f9b0eb7bbe7d4a14a9cff82064c34e97f8289f
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Merge branch 'master' into fix_format
+- commits:
+    - body: null
+- version: 1.0.5
+- date: 2022-05-06T01:38:52Z
+- commits:
+    - hash: 29b0467eec20a0b99e620d526492b09913765959
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update package lock to v2
+- commits:
+    - body: null
+- version: 1.0.4
+- date: 2022-05-06T01:20:52Z
+- commits:
+    - hash: 9fa78c76aed7f7645de3e6bf331581668cfa8c17
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+- commits:
+    - subject: Fix regex
+- commits:
+    - body: null
+- commits:
+    - hash: eae6c8b3190233f6c80a00b349df421f0f0c5f15
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Merge branch 'master' into patch_error
+- commits:
+    - body: null
+- version: 1.0.3
+- date: 2022-05-05T18:07:51Z
+- commits:
+    - hash: 1afe4c91ae4f2cc8dd72817b9d9441a9e1ec2556
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>
+- commits:
+    - subject: Add converter tests
+- commits:
+    - body: null
+- commits:
+    - hash: 835e772ca319be47efd61c0595486299a4d88571
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Merge branch 'parse-tests'
+- commits:
+    - body: null
+- version: 1.0.2
+- date: 2022-05-05T16:36:14Z
+- commits:
+    - hash: 06468b691a2e38a23f52799b146e117367672324
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Rich Sentry events - no breadcrumbs
+- commits:
+    - body: null
+- commits:
+    - hash: dce6779ed61228a97f4e2a0a1ed9bd0fd7651a6e
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Merge branch 'master' into rich_event
+- commits:
+    - body: null
+- commits:
+    - hash: 2dbd119c7f2d4383b6e11b9d4e2da657664a3e79
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: "Change-type: patch"
+- commits:
+    - body: "Signed-off-by: Ramiro Gonzalez <ramiro.gonzalez@balena.io>"
+- commits:
+    - hash: ce845c6daee7d5923172cd2574822666466dda56
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: require node >=16.13 to make builder happy
+- commits:
+    - body: null
+- commits:
+    - hash: 52be0236a3228ee69337157a62b2d6d3b09194fe
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: require node >=14.2 to make builder happy
+- commits:
+    - body: null
+- commits:
+    - hash: 4a1df8d17a50648c8d0930432ab48d0d66a286e7
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: require node >=14.2 to make builder happy
+- commits:
+    - body: null
+- commits:
+    - hash: fa2938d5c68050b43ad601f29f3eeb9c345ac930
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Merge branch 'master' into rich_event
+- commits:
+    - body: null
+- commits:
+    - hash: 5523bdef15a78bc67ea841b590c609b819b62af5
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Define LW_LOGLEVEL_DEFAULT env var
+- commits:
+    - body: null
+- commits:
+    - hash: 76c1bf05bfc9935a29c75311f92bf2607c11b562
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Update README with new fingerprint definitions
+- commits:
+    - body: null
+- commits:
+    - hash: f86e53b2a314d2d9658ad0bcfc2b9635915d5a1b
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: FIX fingerprint
+- commits:
+    - body: null
+- commits:
+    - hash: ab5501a3768b346431451f6130c866746063abb2
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Enhance message format parsing
+- commits:
+    - body: null
+- commits:
+    - hash: 43ab472003bef15b8a4b9473bad3c721cf7b2139
+- commits:
+    - author: Ramiro González Maciel
+- commits:
+    - subject: Bump Version to 1.0.2
+- commits:
+    - body: null
+- commits:
+    - hash: 22f415058573357962e74e8ec03ea24dd08431e5
+- commits:
+    - author: Carlo Miguel F. Cruz
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Carlo Miguel F. Cruz <carloc@balena.io>
+- commits:
+    - subject: Improves journalctl reliability.
+- commits:
+    - body: null
+- version: 1.0.1
+- date: 2022-05-04T12:53:12Z
+- commits:
+    - hash: a0cf57749987020b3a7365d2a426d4644fc6a03f
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update package name to @balena/logwatcher
+- commits:
+    - body: null
+- commits:
+    - hash: 38a49821cb6a8a8bc0ccc26890bba85ed538d248
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add .resinci.yml
+- commits:
+    - body: null
+- version: 1.0.0
+- date: 2022-05-03T06:52:31Z
+- commits:
+    - hash: c924224716b7ea5a91a40919f4cc0c535222dbd4
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Fix compose example usage
+- commits:
+    - body: null
+- commits:
+    - hash: 3ba867f16ac4eca23968dbd0b6a4fb89c50b5d65
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Fix npm start command
+- commits:
+    - body: null
+- commits:
+    - hash: ff0e6c9d0e5677c6756c8023f2e7b61d352b35f4
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update readme
+- commits:
+    - body: null
+- commits:
+    - hash: 370bf8a1f5a873bb1d21c7a410f1b3a8f5c4d3c9
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Fix Dockerfile.template
+- commits:
+    - body: null
+- commits:
+    - hash: ecebacad867a69472d960d068cb9f47484d0ef97
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update repo url
+- commits:
+    - body: null
+- commits:
+    - hash: a084c7e55771857c82566f423118d9200bb3f14c
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add .npmrc
+- commits:
+    - body: null
+- commits:
+    - hash: f8fb9cc2692e2757d5816fce09938dafd61dfff9
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add environment unit test
+- commits:
+    - body: null
+- commits:
+    - hash: 0cbaf5ad7afbe035d4dff37cfc9c57d96ff34092
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add balena.yml
+- commits:
+    - body: null
+- commits:
+    - hash: fdf688a6ebd04edca15abe87a58966072bad0889
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add LICENSE
+- commits:
+    - body: null
+- commits:
+    - hash: acfc4162f5b4b9f79b40af368c7e42f4be1e09c6
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add jest and log unit tests
+- commits:
+    - body: null
+- commits:
+    - hash: 441cf2eba15c90971254f7903e70baf57036f65e
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Update readme
+- commits:
+    - body: null
+- commits:
+    - hash: bd7de97ba59d4562b6644227c8352c485eb4331d
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@monarci.com>
+- commits:
+    - subject: Add nodemon, split out logger
+- commits:
+    - body: null
+- commits:
+    - hash: 0e15ecacf17e0f521e4a3c8467b416d48042474e
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@monarci.com>
+- commits:
+    - subject: Add sentry agent
+- commits:
+    - body: null
+- commits:
+    - hash: 5455c3d5d700355f81d030ce4c26a877786de19a
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@monarci.com>
+- commits:
+    - subject: Add deplint config, fill out package.json properties
+- commits:
+    - body: null
+- commits:
+    - hash: 3a71fba9ec18a7dc9f17215587a797e9134e6799
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add git hook
+- commits:
+    - body: null
+- commits:
+    - hash: 63d3ddb22574752aefb179964ea1f2b8fc77af01
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add env var support
+- commits:
+    - body: null
+- commits:
+    - hash: da7fe3d6061234172a7abf5907205dda61f80b28
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Add repo.yml
+- commits:
+    - body: null
+- commits:
+    - hash: c1425df642ef9fc784a89df1d3b52cca8b65b2cf
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Improve Dockerfile
+- commits:
+    - body: null
+- commits:
+    - hash: 5b5f5c2d7ba1cb9fa5f47609693af474a9da1e4d
+- commits:
+    - author: Josh Bowling
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Josh Bowling <josh@balena.io>
+- commits:
+    - subject: Delete apt cache post install
+- commits:
+    - body: null
