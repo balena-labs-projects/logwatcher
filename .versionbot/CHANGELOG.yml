@@ -1,4 +1,18 @@
 - commits:
+    - subject: moving from balenablocks to balena-labs-projects
+      hash: 596886f64c3983dbdbf5f66699ab28d17ef0cc28
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 1.0.13
+  title: ""
+  date: 2022-11-20T23:33:25.242Z
+- commits:
     - subject: "CI: Move to flowzone"
       hash: 8abfa68a8157bb3779369e79de81c229abc66015
       body: ""
